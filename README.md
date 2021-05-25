@@ -8,9 +8,9 @@ Integrantes:
 
 Para la conexion con la base de datos, se utilizo EntityFrameworkCore. Se instalo a travez del Packet Manager de Nugget, con Visual Studio.
 
-Microsoft.EntityFrameworkCore
-Microsoft.EntityFrameworkCore.Tools
-Microsoft.EntityFrameworkCore.SqlServer
+- Microsoft.EntityFrameworkCore
+- Microsoft.EntityFrameworkCore.Tools
+- Microsoft.EntityFrameworkCore.SqlServer
 
 
 # Base de datos
