@@ -1,8 +1,8 @@
 # Datos
 
-Fecha:25/05/2021
+Fecha:
 
-Integrantes:Diana Lizeth Renteria Aguilera, Ramses Fernando Peña Rojo
+Integrantes:
 
 # Dependencias
 
@@ -77,3 +77,87 @@ public void AddNewProduct(ProductModel newProduct)
 
 }
 ```
+
+# Documentación Endpoints
+
+
+## Endpoint: api/User
+
+Métodos: POST
+
+**POST:**
+
+Crea un nuevo usuario en la base de datos (utilizando el método Add New User en UserService).
+
+Recibe un objeto de tipo UserModel:
+```json
+{
+	UserName: “User”,
+    Password: “Pass”	
+}
+```
+
+## Endpoint: api/Token
+
+Métodos: POST
+
+**POST:**
+Devuelve el token al usuario correspondiente.
+
+Recibe un objeto de tipo UserModel:
+```json
+{
+	UserName: “User”,
+    Password: “Pass”	
+}
+```
+
+## Endpoint: api/Products
+
+Métodos: GET, POST
+
+**GET:**
+Devuelve una lista con todos los productos, usando el método GetAllProducts() de ProductService.
+
+Recibe un token de autenticación.
+
+**POST:**
+Crea un nuevo producto.
+
+Recibe un token de autenticación y un objeto de tipo ProductModel:
+```json
+{
+	ProductId: int,
+	ProductName: string,
+	UnitPrice: decimal,
+	Discontinued: Bool
+}
+```
+
+
+## Endpoint: api/Products/{id}
+
+Métodos: GET, PUT, DELETE
+
+**Get:**
+Devuelve un producto único con el id dado, usando el método GetProductByID() de ProductService.
+
+Únicamente recibe el ID del producto en el URL, y el token de autenticación.
+
+**PUT:**
+Actualiza un producto existente, utilizando el método UpdateProduct() de ProductService.
+
+Recibe el ID del producto en el URL, un token de autenticación, y un objeto de tipo ProductModel:
+```json
+{
+	ProductId: int,
+	ProductName: string,
+	UnitPrice: decimal,
+	Discontinued: Bool
+}
+```
+
+**DELETE:**
+Elimina el producto con el ID dado, utilizando el método DeleteProduct() de ProductService.
+
+Recibe el ID del producto en el URL, y un token de autenticación.
