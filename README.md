@@ -90,10 +90,10 @@ Métodos: POST
 Crea un nuevo usuario en la base de datos (utilizando el método Add New User en UserService).
 
 Recibe un objeto de tipo UserModel:
-```json
+```
 {
-	"UserName": “User”,
-    "Password": “Pass”	
+	UserName: “User”,
+    Password: “Pass”	
 }
 ```
 
@@ -105,10 +105,10 @@ Métodos: POST
 Devuelve el token al usuario correspondiente.
 
 Recibe un objeto de tipo UserModel:
-```json
+```
 {
-	"UserName": “User”,
-    "Password": “Pass”	
+	UserName: “User”,
+    Password: “Pass”	
 }
 ```
 
@@ -125,12 +125,12 @@ Recibe un token de autenticación.
 Crea un nuevo producto.
 
 Recibe un token de autenticación y un objeto de tipo ProductModel:
-```json
+```
 {
-	"ProductId": int,
-	"ProductName": string,
-	"UnitPrice": decimal,
-	"Discontinued": Bool
+	ProductId: int,
+	ProductName: string,
+	UnitPrice: decimal,
+	Discontinued: Bool
 }
 ```
 
@@ -148,7 +148,7 @@ Devuelve un producto único con el id dado, usando el método GetProductByID() d
 Actualiza un producto existente, utilizando el método UpdateProduct() de ProductService.
 
 Recibe el ID del producto en el URL, un token de autenticación, y un objeto de tipo ProductModel:
-```json
+```
 {
 	ProductId: int,
 	ProductName: string,
