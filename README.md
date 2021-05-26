@@ -92,8 +92,8 @@ Crea un nuevo usuario en la base de datos (utilizando el método Add New User en
 Recibe un objeto de tipo UserModel:
 ```json
 {
-	UserName: “User”,
-    Password: “Pass”	
+	"UserName": “User”,
+    "Password": “Pass”	
 }
 ```
 
@@ -107,8 +107,8 @@ Devuelve el token al usuario correspondiente.
 Recibe un objeto de tipo UserModel:
 ```json
 {
-	UserName: “User”,
-    Password: “Pass”	
+	"UserName": “User”,
+    "Password": “Pass”	
 }
 ```
 
@@ -127,10 +127,10 @@ Crea un nuevo producto.
 Recibe un token de autenticación y un objeto de tipo ProductModel:
 ```json
 {
-	ProductId: int,
-	ProductName: string,
-	UnitPrice: decimal,
-	Discontinued: Bool
+	"ProductId": int,
+	"ProductName": string,
+	"UnitPrice": decimal,
+	"Discontinued": Bool
 }
 ```
 
